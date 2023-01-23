@@ -1,5 +1,5 @@
 matplotlib==3.4.1
-streamlit==0.81.0
 folium==0.14.0
 shapely==2.0.0
-streamlit-folium
+streamlit==1.11.1
+streamlit-folium>=0.8.1
