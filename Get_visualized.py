@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from pathlib import Path
 import folium
-from streamlit_folium import folium_static
+from streamlit_folium import st_folium
 from folium.plugins import HeatMap, HeatMapWithTime
 
 
@@ -27,4 +27,4 @@ hm_wide = HeatMapWithTime(df_list,
 
 hmap.add_child(hm_wide)
 folium.GeoJson(shape_vias, style_function=lambda x: {'color':None,'fillColor':'black', 'fillOpacity' : 1}).add_to(hmap)
-map_data = folium_static(hmap, key="fig1", width=700, height=700)
+map_data = st_folium(hmap, key="fig1", width=700, height=700)
