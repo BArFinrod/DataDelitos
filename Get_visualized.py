@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from pathlib import Path
 import folium
+from folium.plugins import HeatMap, HeatMapWithTime
 
 
 p = Path(__file__).parent / "Base_places_shapes.pickle"
