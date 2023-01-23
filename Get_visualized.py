@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from pathlib import Path
 import folium
+from streamlit_folium import st_folium
 from folium.plugins import HeatMap, HeatMapWithTime
 
 
