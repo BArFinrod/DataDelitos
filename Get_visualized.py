@@ -19,7 +19,7 @@ hmap = folium.Map(location=[-16.391241, -71.542952], zoom_start=13, tiles='stame
                   scrollWheelZoom=False,
                   dragging=False)
 
-hm_wide = HeatMap(df_list[0],
+hm_wide = HeatMapWithTime(df_list,
                   min_opacity=0.1,
                   radius=30,
                   gradient = {0.2:'cyan', 0.6: 'purple', 0.8:'red',1:'yellow'}, use_local_extrema=True
