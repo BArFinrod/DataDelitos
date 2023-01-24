@@ -15,11 +15,17 @@ with open(p,'rb') as f:
   shape_vias = pickle.load(f)
 
 # heat map
-hmap = folium.Map(location=[-16.356240, -71.572237], zoom_start=13, tiles='stamentoner', min_zoom=14, max_zoom=15)
+hmap = folium.Map(location=[-16.356240, -71.572237], zoom_start=13, tiles='stamentoner', min_zoom=12, max_zoom=14)
 
-time = st.slider('Horario', 0, 2, 1)
+opts = ['Mañana: 06:00 - 11:59 hrs.', 'Tarde: 12:00 - 17:59 hrs.', 'Noche: 18:00 - 05:59 hrs.']
+dtime = dict(zip(opts,[0,1,2]))
 
-hm_wide = HeatMap(df_list[time],
+# time = st.slider('Horario', 0, 2, 1)
+time = st.select_slider(
+    'Horario',
+    options=opts)
+
+hm_wide = HeatMap(df_list[dtime[time]],
                   min_opacity=0.1,
                   radius=30,
                   gradient = {0.2:'cyan', 0.6: 'purple', 0.8:'red',1:'yellow'}, use_local_extrema=True
