@@ -15,10 +15,7 @@ with open(p,'rb') as f:
   shape_vias = pickle.load(f)
 
 # heat map
-hmap = folium.Map(location=[-16.391241, -71.542952], zoom_start=13, tiles='stamentoner',
-                  zoom_control=False,
-                  scrollWheelZoom=False,
-                  dragging=False)
+hmap = folium.Map(location=[-16.356240, -71.572237], zoom_start=13, tiles='stamentoner', min_zoom=14, max_zoom=15)
 
 time = st.slider('Horario', 0, 2, 1)
 
