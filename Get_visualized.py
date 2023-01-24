@@ -26,5 +26,5 @@ hm_wide = HeatMap(df_list[0],
                  )
 
 hmap.add_child(hm_wide)
-folium.GeoJson(shape_vias, style_function=lambda x: {'color':None,'fillColor':'black', 'fillOpacity' : 1}).add_to(hmap)
+# folium.GeoJson(shape_vias, style_function=lambda x: {'color':None,'fillColor':'black', 'fillOpacity' : 1}).add_to(hmap)
 map_data = st_folium(hmap, key="fig1", width=700, height=700)
