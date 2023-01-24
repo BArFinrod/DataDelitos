@@ -5,6 +5,7 @@ from pathlib import Path
 import folium
 from streamlit_folium import st_folium
 from folium.plugins import HeatMap, HeatMapWithTime
+import streamlit as st
 
 
 p = Path(__file__).parent / "Base_places_shapes.pickle"
