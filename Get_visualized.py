@@ -164,5 +164,3 @@ st.markdown('<p class="big-font">Gráfico 05. Distribución de los delitos denun
 st.plotly_chart(fighist)
 # plt.xlabel('Hora del día')
 # st.pyplot(figkde)
-
-
