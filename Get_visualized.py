@@ -86,7 +86,7 @@ fig.update_layout(
 
 ######## pasar a Streamlit
 ## Logo
-image = Image.open('C:/Users/saico/OneDrive/Proyectos/Vaes/Delincuencia/Marca/Logo_blanco.jpeg')
+image = Image.open(Path(__file__).parent / 'Logo_blanco.jpeg')
 st.image(image, width=150)
 ##
 st.title("Delitos denunciados en Yanahuara, Cayma y Cerro Colorado en 2017")
